@@ -1,8 +1,11 @@
 package camt.cbsd.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Created by Dto on 3/11/2017.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Student {
     long id;
     String studentId;
@@ -24,6 +27,9 @@ public class Student {
         this.feature = feature;
         this.penAmount = penAmount;
         this.description = description;
+    }
+
+    public Student() {
     }
 
     @Override
